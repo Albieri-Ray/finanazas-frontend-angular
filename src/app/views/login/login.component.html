@@ -1,6 +1,34 @@
-<div nz-row nzAlign="middle" nzJustify="center" style="height: 90%">
-
-  <button nz-button nzType="primary" nzSize="large" nzShape="round"
-          style="background-color: #da70d6; float: right; align-content: center" routerLink="/register">Register</button>
-</div>
+<nz-row nzJustify="center" nzAlign="middle" style="height: 90%">
+  <nz-card nzTitle="Login" [nzBordered]="true">
+    <form nz-form [formGroup]="form" (ngSubmit)="loginUser()">
+      <nz-form-item>
+        <nz-form-label nzSpan="7">Email</nz-form-label>
+        <nz-form-control>
+          <label>
+            <input nz-input type = "text" name="email" formControlName="email"/>
+          </label>
+        </nz-form-control>
+      </nz-form-item>
+      <br/>
+      <nz-form-item>
+        <nz-form-label nzSpan="7">Password</nz-form-label>
+        <nz-form-control>
+          <label>
+            <input nz-input type = "text" name="password" formControlName="password"/>
+          </label>
+        </nz-form-control>
+      </nz-form-item>
+      <br/>
+      <div style="text-align: center">
+        <button nz-button nzType="primary" nzSize="large" nzShape="round"
+                style="background-color: dodgerblue" type = "submit">Login</button>
+      </div>
+      <br/>
+      <div style="text-align: center">
+        <button nz-button nzType="primary" nzSize="large" nzShape="round"
+                style="background-color: #da70d6" routerLink="/register">Register</button>
+      </div>
+    </form>
+  </nz-card>
+</nz-row>
 

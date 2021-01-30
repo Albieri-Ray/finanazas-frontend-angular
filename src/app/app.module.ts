@@ -20,6 +20,9 @@ import {NzCardModule} from 'ng-zorro-antd/card';
 import {NzInputModule} from 'ng-zorro-antd/input';
 import {NzFormModule} from 'ng-zorro-antd/form';
 import {NzNotificationModule} from 'ng-zorro-antd/notification';
+import { MenuComponent } from './views/menu/menu.component';
+import { HomeComponent } from './views/home/home.component';
+import { ListClientComponent } from './views/list-client/list-client.component';
 
 registerLocaleData(en);
 
@@ -27,7 +30,10 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    MenuComponent,
+    HomeComponent,
+    ListClientComponent
   ],
   imports: [
     BrowserModule,
