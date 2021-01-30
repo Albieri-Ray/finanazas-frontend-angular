@@ -6,7 +6,7 @@ import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './views/login/login.component';
@@ -16,6 +16,10 @@ import { RegisterComponent } from './views/register/register.component';
 import {NzLayoutModule} from 'ng-zorro-antd/layout';
 import {NzGridModule} from 'ng-zorro-antd/grid';
 import {NzButtonModule} from 'ng-zorro-antd/button';
+import {NzCardModule} from 'ng-zorro-antd/card';
+import {NzInputModule} from 'ng-zorro-antd/input';
+import {NzFormModule} from 'ng-zorro-antd/form';
+import {NzNotificationModule} from 'ng-zorro-antd/notification';
 
 registerLocaleData(en);
 
@@ -33,7 +37,13 @@ registerLocaleData(en);
     RouterModule.forRoot(routes),
     NzLayoutModule,
     NzGridModule,
-    NzButtonModule
+    NzButtonModule,
+    NzCardModule,
+    NzInputModule,
+    ReactiveFormsModule,
+    FormsModule,
+    NzFormModule,
+    NzNotificationModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
