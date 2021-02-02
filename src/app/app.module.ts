@@ -23,6 +23,9 @@ import {NzNotificationModule} from 'ng-zorro-antd/notification';
 import { MenuComponent } from './views/menu/menu.component';
 import { HomeComponent } from './views/home/home.component';
 import { ListClientComponent } from './views/list-client/list-client.component';
+import {NzMenuModule} from 'ng-zorro-antd/menu';
+import {NzIconModule} from 'ng-zorro-antd/icon';
+import {NzTableModule} from 'ng-zorro-antd/table';
 
 registerLocaleData(en);
 
@@ -49,7 +52,10 @@ registerLocaleData(en);
     ReactiveFormsModule,
     FormsModule,
     NzFormModule,
-    NzNotificationModule
+    NzNotificationModule,
+    NzMenuModule,
+    NzIconModule,
+    NzTableModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

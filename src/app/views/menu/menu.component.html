@@ -1,1 +1,24 @@
-<p>menu works!</p>
+<nz-layout style="min-height: 100vh">
+  <nz-sider nzCollapsible nzWidth="200px">
+    <div style="height: 32px; background: rgba(255, 255, 255, 0.2); margin: 16px;"></div>
+    <ul nz-menu nzTheme="dark" nzMode="inline">
+      <li nz-menu-item routerLink="/home">
+        <i nz-icon nzType="home" nzTheme="outline"></i>
+        <span>Home</span>
+      </li>
+      <li nz-menu-item routerLink="/list-client">
+        <i nz-icon nzType="user" nzTheme="outline"></i>
+        <span>Client</span>
+      </li>
+      <li nz-menu-item>
+        <i nz-icon nzType="key" nzTheme="outline"></i>
+        <span>Maintenances</span>
+      </li>
+      <li nz-menu-item>
+        <i nz-icon nzType="shopping-cart" nzTheme="outline"></i>
+        <span>Delivery</span>
+      </li>
+    </ul>
+  </nz-sider>
+  </nz-layout>
+

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {ClientService} from '../../services/client.service';
+import {Router} from '@angular/router';
+import {Client} from '../../models/client';
+
 
 @Component({
   selector: 'app-list-client',
@@ -6,10 +10,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-client.component.css']
 })
 export class ListClientComponent implements OnInit {
-
-  constructor() { }
+  clients: Client[];
+  constructor(private clientService: ClientService, private router: Router) { }
 
   ngOnInit(): void {
+    this.getAllClientsByUser();
   }
-
+  getAllClientsByUser(): void{
+    this.clientService.getAllClientsByUser().subscribe(
+      (response: any) => this.clients = response.content,
+      error => console.log(error)
+    );
+  }
 }
