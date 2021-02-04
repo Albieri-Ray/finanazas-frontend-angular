@@ -26,6 +26,9 @@ import { ListClientComponent } from './views/list-client/list-client.component';
 import {NzMenuModule} from 'ng-zorro-antd/menu';
 import {NzIconModule} from 'ng-zorro-antd/icon';
 import {NzTableModule} from 'ng-zorro-antd/table';
+import { AddClientComponent } from './views/add-client/add-client.component';
+import {NzModalModule} from 'ng-zorro-antd/modal';
+import { EditClientComponent } from './views/edit-client/edit-client.component';
 
 registerLocaleData(en);
 
@@ -36,7 +39,9 @@ registerLocaleData(en);
     RegisterComponent,
     MenuComponent,
     HomeComponent,
-    ListClientComponent
+    ListClientComponent,
+    AddClientComponent,
+    EditClientComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +60,8 @@ registerLocaleData(en);
     NzNotificationModule,
     NzMenuModule,
     NzIconModule,
-    NzTableModule
+    NzTableModule,
+    NzModalModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
