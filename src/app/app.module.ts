@@ -29,6 +29,9 @@ import {NzTableModule} from 'ng-zorro-antd/table';
 import { AddClientComponent } from './views/add-client/add-client.component';
 import {NzModalModule} from 'ng-zorro-antd/modal';
 import { EditClientComponent } from './views/edit-client/edit-client.component';
+import { ListDeliveryComponent } from './views/list-delivery/list-delivery.component';
+import {NzSelectModule} from 'ng-zorro-antd/select';
+import { AddDeliveryComponent } from './views/add-delivery/add-delivery.component';
 
 registerLocaleData(en);
 
@@ -41,7 +44,9 @@ registerLocaleData(en);
     HomeComponent,
     ListClientComponent,
     AddClientComponent,
-    EditClientComponent
+    EditClientComponent,
+    ListDeliveryComponent,
+    AddDeliveryComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +66,8 @@ registerLocaleData(en);
     NzMenuModule,
     NzIconModule,
     NzTableModule,
-    NzModalModule
+    NzModalModule,
+    NzSelectModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

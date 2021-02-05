@@ -1,0 +1,48 @@
+<nz-row style="height: 90%">
+  <app-menu></app-menu>
+  <nz-layout style="align-content: center; ">
+    <div nz-row nzAlign="middle" nzJustify="center">
+      <div nz-col [nzSpan]="4"></div>
+      <div nz-col [nzSpan]="16">
+        <button nz-button nzType="primary" nzSize="large" nzShape="round"
+                style="background-color: black; float: left" routerLink="/add-delivery">Add</button>
+        <nz-select nzPlaceHolder="Select Client" [(ngModel)]="clientId" (ngModelChange)="changeClient(clientId)">
+          <nz-option *ngFor="let client of clients" [nzValue]="client.id" [nzLabel]="client.firstName"></nz-option>
+        </nz-select>
+      </div>
+      <nz-table [nzData]="deliveries" [nzBordered]="true" [nzShowPagination]="false">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Price Product</th>
+          <th>Price Delivery</th>
+          <th>Register Date</th>
+          <th>Frequency</th>
+          <th>Home Address</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let delivery of deliveries">
+          <td>{{delivery.name}}</td>
+          <td>{{delivery.description}}</td>
+          <td>{{delivery.priceProduct}}</td>
+          <td>{{delivery.priceDelivery}}</td>
+          <td>{{delivery.registerDate}}</td>
+          <td>{{delivery.frequency}}</td>
+          <td>{{delivery.homeAddress}}</td>
+          <td>
+            <button style="margin-right: 3px">
+              <i nz-icon nzType="edit" nzTheme="outline"></i>
+            </button>
+            <button>
+              <i nz-icon nzType="shopping" nzTheme="outline"></i>
+            </button>
+          </td>
+        </tr>
+        </tbody>
+      </nz-table>
+      <div nz-col [nzSpan]="4"></div>
+    </div></nz-layout>
+</nz-row>

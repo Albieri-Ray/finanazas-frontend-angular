@@ -14,9 +14,13 @@
         <i nz-icon nzType="key" nzTheme="outline"></i>
         <span>Maintenances</span>
       </li>
-      <li nz-menu-item>
+      <li nz-menu-item routerLink="/list-delivery">
         <i nz-icon nzType="shopping-cart" nzTheme="outline"></i>
         <span>Delivery</span>
+      </li>
+      <li nz-menu-item (click)="logout()">
+        <i nz-icon nzType="logout" nzTheme="outline"></i>
+        <span>Logout</span>
       </li>
     </ul>
   </nz-sider>
