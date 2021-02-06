@@ -1,0 +1,44 @@
+<nz-row style="height: 90%">
+  <app-menu></app-menu>
+  <nz-layout style="align-content: center; ">
+    <div nz-row nzAlign="middle" nzJustify="center">
+      <div nz-col [nzSpan]="4"></div>
+      <div nz-col [nzSpan]="16">
+        <button nz-button nzType="primary" nzSize="large" nzShape="round"
+                style="background-color: black; float: left" (click)="saveVoucher()">Add</button>
+      </div>
+      <nz-table [nzData]="vouchers" [nzBordered]="true" [nzShowPagination]="false">
+        <thead>
+        <tr>
+          <th>Delivery Name</th>
+          <th>Description</th>
+          <th>Total</th>
+          <th>Register Date</th>
+          <th>Frequency</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let voucher of vouchers">
+          <td>{{voucher.deliveryName}}</td>
+          <td>{{voucher.description}}</td>
+          <td>{{voucher.total}}</td>
+          <td>{{voucher.registerDate}}</td>
+          <td>{{voucher.frequency}}</td>
+          <td>
+            <button style="margin-right: 3px" (click)="showModal(voucher.id)" >
+              <i nz-icon nzType="delete" nzTheme="outline"></i>
+            </button>
+          </td>
+        </tr>
+        </tbody>
+      </nz-table>
+      <nz-modal nzTitle="Delete Voucher" [(nzVisible)]="visibleDeleteModal" (nzOnCancel)="cancelModal()"
+                (nzOnOk)="deleteVoucher()">
+        <ng-container *nzModalContent>
+          <p>Are you sure want to delete?</p>
+        </ng-container>
+      </nz-modal>
+      <div nz-col [nzSpan]="4"></div>
+    </div></nz-layout>
+</nz-row>

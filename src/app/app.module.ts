@@ -33,6 +33,7 @@ import { ListDeliveryComponent } from './views/list-delivery/list-delivery.compo
 import {NzSelectModule} from 'ng-zorro-antd/select';
 import { AddDeliveryComponent } from './views/add-delivery/add-delivery.component';
 import { EditDeliveryComponent } from './views/edit-delivery/edit-delivery.component';
+import { ListVoucherComponent } from './views/list-voucher/list-voucher.component';
 
 registerLocaleData(en);
 
@@ -48,7 +49,8 @@ registerLocaleData(en);
     EditClientComponent,
     ListDeliveryComponent,
     AddDeliveryComponent,
-    EditDeliveryComponent
+    EditDeliveryComponent,
+    ListVoucherComponent
   ],
   imports: [
     BrowserModule,

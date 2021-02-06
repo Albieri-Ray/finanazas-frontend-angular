@@ -47,4 +47,8 @@ export class ListDeliveryComponent implements OnInit{
   goToEditDelivery(deliveryId: number): void{
     this.router.navigate([`edit-delivery/${deliveryId}`]).then();
   }
+
+  goToVoucherList(deliveryId: number): void{
+    this.router.navigate([`${deliveryId}/list-voucher`]).then();
+  }
 }

@@ -8,6 +8,7 @@ import {EditClientComponent} from './views/edit-client/edit-client.component';
 import {ListDeliveryComponent} from './views/list-delivery/list-delivery.component';
 import {AddDeliveryComponent} from './views/add-delivery/add-delivery.component';
 import {EditDeliveryComponent} from './views/edit-delivery/edit-delivery.component';
+import {ListVoucherComponent} from './views/list-voucher/list-voucher.component';
 
 export const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -19,5 +20,6 @@ export const routes: Routes = [
   {path: 'edit-client/:id', component: EditClientComponent},
   {path: 'list-delivery', component: ListDeliveryComponent},
   {path: 'add-delivery', component: AddDeliveryComponent},
-  {path: 'edit-delivery/:id', component: EditDeliveryComponent}
+  {path: 'edit-delivery/:id', component: EditDeliveryComponent},
+  {path: ':deliveryId/list-voucher', component: ListVoucherComponent}
 ];
