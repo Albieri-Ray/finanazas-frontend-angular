@@ -1,11 +1,6 @@
 <nz-row nzJustify="center" nzAlign="middle" style="height: 90%">
-  <nz-card nzTitle="Register" [nzBordered]="true">
-    <nz-form-label nzSpan="9">Client</nz-form-label>
-    <nz-select nzPlaceHolder="Select Client" [(ngModel)]="clientId">
-      <nz-option *ngFor="let client of clients" [nzValue]="client.id" [nzLabel]="client.firstName"></nz-option>
-    </nz-select>
-    <form nz-form [formGroup]="form" (ngSubmit)="saveDelivery()">
-      <br/>
+  <nz-card nzTitle="Update" [nzBordered]="true">
+    <form nz-form [formGroup]="form" (ngSubmit)="updateDelivery()">
       <nz-form-item>
         <nz-form-label nzSpan="7">Name</nz-form-label>
         <nz-form-control>

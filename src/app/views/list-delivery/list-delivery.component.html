@@ -33,7 +33,7 @@
           <td>{{delivery.frequency}}</td>
           <td>{{delivery.homeAddress}}</td>
           <td>
-            <button style="margin-right: 3px">
+            <button style="margin-right: 3px" (click)="goToEditDelivery(delivery.id)">
               <i nz-icon nzType="edit" nzTheme="outline"></i>
             </button>
             <button>

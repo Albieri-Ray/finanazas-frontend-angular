@@ -32,6 +32,7 @@ import { EditClientComponent } from './views/edit-client/edit-client.component';
 import { ListDeliveryComponent } from './views/list-delivery/list-delivery.component';
 import {NzSelectModule} from 'ng-zorro-antd/select';
 import { AddDeliveryComponent } from './views/add-delivery/add-delivery.component';
+import { EditDeliveryComponent } from './views/edit-delivery/edit-delivery.component';
 
 registerLocaleData(en);
 
@@ -46,7 +47,8 @@ registerLocaleData(en);
     AddClientComponent,
     EditClientComponent,
     ListDeliveryComponent,
-    AddDeliveryComponent
+    AddDeliveryComponent,
+    EditDeliveryComponent
   ],
   imports: [
     BrowserModule,

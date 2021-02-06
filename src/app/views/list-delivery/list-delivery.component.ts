@@ -22,8 +22,8 @@ export class ListDeliveryComponent implements OnInit{
     this.getAllClients();
   }
   getAllClients(): void {
-    this.clientService.getAllClientWithoutPagination().subscribe((
-      response: any) => this.clients = response.content,
+    this.clientService.getAllClientActive().subscribe(
+      response => this.clients = response,
       error => console.log(error));
   }
   getAllDeliveriesByClient(clientId: number): void{
@@ -42,5 +42,9 @@ export class ListDeliveryComponent implements OnInit{
   changeClient(id: number): void{
     this.getAllDeliveriesByClient(id);
     console.log(id);
+  }
+
+  goToEditDelivery(deliveryId: number): void{
+    this.router.navigate([`edit-delivery/${deliveryId}`]).then();
   }
 }

@@ -24,4 +24,8 @@ export class DeliveryService {
   update(delivery: Delivery, deliveryId: number): Observable<Delivery>{
     return this.http.put<Delivery>(`${this.baseUrl}/deliveries/${deliveryId}/`, delivery, {headers: httpHeaders});
   }
+  getById(deliveryId: number): Observable<Delivery>{
+    // @ts-ignore
+    return this.http.get(`${this.baseUrl}/deliveries/${deliveryId}/`, {headers: httpHeaders});
+  }
 }

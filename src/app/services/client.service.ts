@@ -34,9 +34,9 @@ export class ClientService {
     // @ts-ignore
     return this.http.put(`${this.baseUrl}/clients/${clientId}/`, client , {headers: httpHeaders});
   }
-  getAllClientWithoutPagination(): Observable<Client[]>{
+  getAllClientActive(): Observable<Client[]>{
     const userId = JSON.parse(localStorage.getItem('userId'));
     // @ts-ignore
-    return this.http.get(`${this.baseUrl}/users/${userId}/clients/`, {headers: httpHeaders});
+    return this.http.get(`${this.baseUrl}/users/${userId}/clients/active/`, {headers: httpHeaders});
   }
 }
