@@ -9,6 +9,9 @@ import {ListDeliveryComponent} from './views/list-delivery/list-delivery.compone
 import {AddDeliveryComponent} from './views/add-delivery/add-delivery.component';
 import {EditDeliveryComponent} from './views/edit-delivery/edit-delivery.component';
 import {ListVoucherComponent} from './views/list-voucher/list-voucher.component';
+import {ListMaintenanceComponent} from './views/list-maintenance/list-maintenance.component';
+import {AddMaintenanceComponent} from './views/add-maintenance/add-maintenance.component';
+import {EditMaintenanceComponent} from './views/edit-maintenance/edit-maintenance.component';
 
 export const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -21,5 +24,8 @@ export const routes: Routes = [
   {path: 'list-delivery', component: ListDeliveryComponent},
   {path: 'add-delivery', component: AddDeliveryComponent},
   {path: 'edit-delivery/:id', component: EditDeliveryComponent},
-  {path: ':deliveryId/list-voucher', component: ListVoucherComponent}
+  {path: ':deliveryId/list-voucher', component: ListVoucherComponent},
+  {path: 'list-maintenance', component: ListMaintenanceComponent},
+  {path: 'add-maintenance', component: AddMaintenanceComponent},
+  {path: 'edit-maintenance/:id', component: EditMaintenanceComponent}
 ];
