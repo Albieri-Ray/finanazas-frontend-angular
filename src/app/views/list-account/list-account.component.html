@@ -5,7 +5,7 @@
       <div nz-col [nzSpan]="4"></div>
       <div nz-col [nzSpan]="16">
         <button nz-button nzType="primary" nzSize="large" nzShape="round"
-                style="background-color: black; float: left">Add</button>
+                style="background-color: black; float: left" routerLink="/add-account">Add</button>
         <nz-select nzPlaceHolder="Select Client" [(ngModel)]="clientId" (ngModelChange)="changeClient(clientId)">
           <nz-option *ngFor="let client of clients" [nzValue]="client.id" [nzLabel]="client.firstName"></nz-option>
         </nz-select>

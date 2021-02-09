@@ -15,4 +15,8 @@ export class LineOfCreditService {
     // @ts-ignore
     return this.http.get(`${this.baseUrl}/lineaOfCredits/${lineOfCreditId}/`, {headers: httpHeaders});
   }
+  create(lineOfCredit: LineOfCredit): Observable<LineOfCredit>{
+    // @ts-ignore
+    return this.http.post(`${this.baseUrl}/lineaOfCredits/`, lineOfCredit, {headers: httpHeaders});
+  }
 }

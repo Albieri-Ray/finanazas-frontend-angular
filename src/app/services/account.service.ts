@@ -4,6 +4,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Account} from '../models/account';
 import {httpHeaders} from './httpHeaders';
+import {LineOfCredit} from '../models/line-of-credit';
 
 @Injectable({
   providedIn: 'root'
@@ -14,5 +15,10 @@ export class AccountService {
   getAllAccountsByClient(clientId: number): Observable<Account[]>{
     // @ts-ignore
     return this.http.get(`${this.baseUrl}/clients/${clientId}/accounts/`, {headers: httpHeaders});
+  }
+  create(lineOfCreditId: number, maintenanceId: number, clientId: number): Observable<LineOfCredit>{
+    // @ts-ignore
+    return this.http.post(`${this.baseUrl}/clients/${clientId}/maintenances/${maintenanceId}/lineOfCredits/${lineOfCreditId}/accounts/`
+      , {}, {headers: httpHeaders});
   }
 }

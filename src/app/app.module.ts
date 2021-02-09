@@ -39,6 +39,7 @@ import { AddMaintenanceComponent } from './views/add-maintenance/add-maintenance
 import { EditMaintenanceComponent } from './views/edit-maintenance/edit-maintenance.component';
 import { ListAccountComponent } from './views/list-account/list-account.component';
 import { DetailLineOfCreditComponent } from './views/detail-line-of-credit/detail-line-of-credit.component';
+import { AddAccountComponent } from './views/add-account/add-account.component';
 
 registerLocaleData(en);
 
@@ -60,7 +61,8 @@ registerLocaleData(en);
     AddMaintenanceComponent,
     EditMaintenanceComponent,
     ListAccountComponent,
-    DetailLineOfCreditComponent
+    DetailLineOfCreditComponent,
+    AddAccountComponent
   ],
   imports: [
     BrowserModule,
