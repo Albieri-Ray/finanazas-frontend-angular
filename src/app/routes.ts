@@ -15,6 +15,8 @@ import {EditMaintenanceComponent} from './views/edit-maintenance/edit-maintenanc
 import {ListAccountComponent} from './views/list-account/list-account.component';
 import {DetailLineOfCreditComponent} from './views/detail-line-of-credit/detail-line-of-credit.component';
 import {AddAccountComponent} from './views/add-account/add-account.component';
+import {EditLineOfCreditComponent} from './views/edit-line-of-credit/edit-line-of-credit.component';
+import {AccountChangeMaintenanceComponent} from './views/account-change-maintenance/account-change-maintenance.component';
 
 export const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -33,5 +35,7 @@ export const routes: Routes = [
   {path: 'edit-maintenance/:id', component: EditMaintenanceComponent},
   {path: 'list-account', component: ListAccountComponent},
   {path: 'detail-line-of-credit/:id', component: DetailLineOfCreditComponent},
-  {path: 'add-account', component: AddAccountComponent}
+  {path: 'add-account', component: AddAccountComponent},
+  {path: 'edit-line-of-credit/:id', component: EditLineOfCreditComponent},
+  {path: 'account-change-maintenance/:id', component: AccountChangeMaintenanceComponent}
 ];

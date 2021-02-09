@@ -30,10 +30,10 @@
             </button>
           </td>
           <td>
-            <button style="margin-right: 6px" >
+            <button style="margin-right: 6px" (click)="goToEditLineOfCredit(this.account.lineOfCredit.id)">
               <i nz-icon nzType="edit" nzTheme="outline"></i>
             </button>
-            <button>
+            <button  (click)="goToEditMaintenance(this.account.id)">
               <i nz-icon nzType="edit" nzTheme="outline"></i>
             </button>
           </td>

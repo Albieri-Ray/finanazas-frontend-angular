@@ -46,4 +46,10 @@ export class ListAccountComponent implements OnInit {
   goToShowLineOfCredit(id: number): void{
     this.router.navigate([`detail-line-of-credit/${id}`]).then();
   }
+  goToEditLineOfCredit(lineOfCreditId: number): void{
+    this.router.navigate([`edit-line-of-credit/${lineOfCreditId}`]).then();
+  }
+  goToEditMaintenance(accountId: number): void{
+    this.router.navigate([`account-change-maintenance/${accountId}`]).then();
+  }
 }

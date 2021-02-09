@@ -1,0 +1,57 @@
+<nz-row nzJustify="center" nzAlign="middle" style="height: 90%">
+  <nz-card nzTitle="Update" [nzBordered]="true">
+    <form nz-form [formGroup]="form" (ngSubmit)="updateMaintenance()">
+      <nz-form-item>
+        <nz-form-label nzSpan="7">Rate Type</nz-form-label>
+        <nz-form-control>
+          <label>
+            <input nz-input type = "text" name="rateType" formControlName="rateType"/>
+          </label>
+        </nz-form-control>
+      </nz-form-item>
+      <br/>
+      <nz-form-item>
+        <nz-form-label nzSpan="7">Credit</nz-form-label>
+        <nz-form-control>
+          <label>
+            <input nz-input type = "text" name="credit" formControlName="credit"/>
+          </label>
+        </nz-form-control>
+      </nz-form-item>
+      <br/>
+      <nz-form-item>
+        <nz-form-label nzSpan="7">Type Of Currency</nz-form-label>
+        <nz-form-control>
+          <label>
+            <input nz-input type = "text" name="typeOfCurrency" formControlName="typeOfCurrency"/>
+          </label>
+        </nz-form-control>
+      </nz-form-item>
+      <br/>
+      <nz-form-item>
+        <nz-form-label nzSpan="7">Period</nz-form-label>
+        <nz-form-control>
+          <nz-select nzPlaceHolder="Select your period" formControlName="period">
+            <nz-option *ngFor="let option of periodOptions" [nzValue]="option" [nzLabel]="option"></nz-option>
+          </nz-select>
+        </nz-form-control>
+      </nz-form-item>
+      <br/>
+      <nz-form-item>
+        <nz-form-label nzSpan="7">Rate Value</nz-form-label>
+        <nz-form-control>
+          <label>
+            <input nz-input type = "text" name="rateValue" formControlName="rateValue"/>
+          </label>
+        </nz-form-control>
+      </nz-form-item>
+      <br/>
+      <div>
+        <button nz-button nzType="primary" nzSize="large" nzShape="round"
+                style="background-color: brown; float: left" routerLink="/list-account">Cancel</button>
+        <button nz-button nzType="primary" nzSize="large" nzShape="round"
+                style="background-color: dodgerblue; float: right" type = "submit">Save</button>
+      </div>
+    </form>
+  </nz-card>
+</nz-row>

@@ -19,4 +19,12 @@ export class LineOfCreditService {
     // @ts-ignore
     return this.http.post(`${this.baseUrl}/lineaOfCredits/`, lineOfCredit, {headers: httpHeaders});
   }
+  getById(lineOfCreditId: number): Observable<LineOfCredit>{
+    // @ts-ignore
+    return this.http.get(`${this.baseUrl}/lineaOfCredits/${lineOfCreditId}/`, {headers: httpHeaders});
+  }
+  update(lineOfCredit: LineOfCredit, lineOfCreditId: number): Observable<LineOfCredit>{
+    // @ts-ignore
+    return this.http.put(`${this.baseUrl}/lineaOfCredits/${lineOfCreditId}/`, lineOfCredit, {headers: httpHeaders});
+  }
 }

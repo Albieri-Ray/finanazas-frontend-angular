@@ -1,0 +1,15 @@
+<nz-row nzJustify="center" nzAlign="middle" style="height: 90%">
+  <nz-card nzTitle="Update" [nzBordered]="true">
+      <nz-form-label nzSpan="9">Maintenances</nz-form-label>
+      <nz-select nzPlaceHolder="Select Maintenance" [(ngModel)]="maintenanceId">
+        <nz-option *ngFor="let maintenance of maintenances" [nzValue]="maintenance.id" [nzLabel]="maintenance.description"></nz-option>
+      </nz-select>
+      <br/>
+      <div>
+        <button nz-button nzType="primary" nzSize="large" nzShape="round"
+                style="background-color: brown; float: left" routerLink="/list-account">Cancel</button>
+        <button nz-button nzType="primary" nzSize="large" nzShape="round"
+                style="background-color: dodgerblue; float: right" (click)="changeMaintenance()">Save</button>
+      </div>
+  </nz-card>
+</nz-row>
