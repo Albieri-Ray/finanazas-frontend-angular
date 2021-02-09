@@ -12,6 +12,7 @@ import {ListVoucherComponent} from './views/list-voucher/list-voucher.component'
 import {ListMaintenanceComponent} from './views/list-maintenance/list-maintenance.component';
 import {AddMaintenanceComponent} from './views/add-maintenance/add-maintenance.component';
 import {EditMaintenanceComponent} from './views/edit-maintenance/edit-maintenance.component';
+import {ListAccountComponent} from './views/list-account/list-account.component';
 
 export const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -27,5 +28,6 @@ export const routes: Routes = [
   {path: ':deliveryId/list-voucher', component: ListVoucherComponent},
   {path: 'list-maintenance', component: ListMaintenanceComponent},
   {path: 'add-maintenance', component: AddMaintenanceComponent},
-  {path: 'edit-maintenance/:id', component: EditMaintenanceComponent}
+  {path: 'edit-maintenance/:id', component: EditMaintenanceComponent},
+  {path: 'list-account', component: ListAccountComponent}
 ];

@@ -13,6 +13,7 @@ import {NzNotificationService} from 'ng-zorro-antd/notification';
 export class EditMaintenanceComponent implements OnInit {
   maintenance = new Maintenance();
   form: FormGroup;
+  frequencyOptions = ['Semanal', 'Quincenal', 'Mensual', 'Bimestral', 'Trimestral', 'Cuatrimestral', 'Anual'];
   constructor(private formBuilder: FormBuilder, private maintenanceService: MaintenanceService, private router: Router,
               private notification: NzNotificationService, private route: ActivatedRoute) { }
 
@@ -46,7 +47,7 @@ export class EditMaintenanceComponent implements OnInit {
       const id = this.route.snapshot.paramMap.get('id');
       this.maintenance = this.form.value;
       this.maintenanceService.update(this.maintenance, Number(id)).subscribe(
-        () => this.router.navigate(['list-client']).then(() => location.reload()),
+        () => this.router.navigate(['list-maintenance']).then(() => location.reload()),
         error => console.log(error));
       console.log(this.maintenance);
     }

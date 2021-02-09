@@ -22,9 +22,9 @@
       <nz-form-item>
         <nz-form-label nzSpan="7">Frequency</nz-form-label>
         <nz-form-control>
-          <label>
-            <input nz-input type = "text" name="frequency" formControlName="frequency"/>
-          </label>
+          <nz-select nzPlaceHolder="Select your frequency" formControlName="frequency">
+            <nz-option *ngFor="let option of frequencyOptions" [nzValue]="option" [nzLabel]="option"></nz-option>
+          </nz-select>
         </nz-form-control>
       </nz-form-item>
       <br/>

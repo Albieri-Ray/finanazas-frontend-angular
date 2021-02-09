@@ -37,6 +37,7 @@ import { ListVoucherComponent } from './views/list-voucher/list-voucher.componen
 import { ListMaintenanceComponent } from './views/list-maintenance/list-maintenance.component';
 import { AddMaintenanceComponent } from './views/add-maintenance/add-maintenance.component';
 import { EditMaintenanceComponent } from './views/edit-maintenance/edit-maintenance.component';
+import { ListAccountComponent } from './views/list-account/list-account.component';
 
 registerLocaleData(en);
 
@@ -56,7 +57,8 @@ registerLocaleData(en);
     ListVoucherComponent,
     ListMaintenanceComponent,
     AddMaintenanceComponent,
-    EditMaintenanceComponent
+    EditMaintenanceComponent,
+    ListAccountComponent
   ],
   imports: [
     BrowserModule,

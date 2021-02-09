@@ -15,6 +15,7 @@ export class AddMaintenanceComponent implements OnInit {
               private notification: NzNotificationService) { }
   maintenance = new Maintenance();
   form: FormGroup;
+  frequencyOptions = ['Semanal', 'Quincenal', 'Mensual', 'Bimestral', 'Trimestral', 'Cuatrimestral', 'Anual'];
   ngOnInit(): void {
     this.createForm();
   }
