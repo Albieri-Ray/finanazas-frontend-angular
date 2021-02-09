@@ -1,0 +1,65 @@
+<nz-row nzJustify="center" nzAlign="middle" style="height: 90%">
+  <nz-card nzTitle="Show" [nzBordered]="true">
+    <form nz-form [formGroup]="form">
+      <nz-form-item>
+        <nz-form-label nzSpan="7">Rate Type</nz-form-label>
+        <nz-form-control>
+          <label>
+            <input nz-input type = "text" name="rateType" formControlName="rateType"/>
+          </label>
+        </nz-form-control>
+      </nz-form-item>
+      <br/>
+      <nz-form-item>
+        <nz-form-label nzSpan="7">Credit</nz-form-label>
+        <nz-form-control>
+          <label>
+            <input nz-input type = "text" name="credit" formControlName="credit"/>
+          </label>
+        </nz-form-control>
+      </nz-form-item>
+      <br/>
+      <nz-form-item>
+        <nz-form-label nzSpan="7">Type Of Currency</nz-form-label>
+        <nz-form-control>
+          <label>
+            <input nz-input type = "text" name="typeOfCurrency" formControlName="typeOfCurrency"/>
+          </label>
+        </nz-form-control>
+      </nz-form-item>
+      <br/>
+      <nz-form-item>
+        <nz-form-label nzSpan="7">Register Date</nz-form-label>
+        <nz-form-control>
+          <label>
+            <input nz-input type = "text" name="registerDate" formControlName="registerDate"/>
+          </label>
+        </nz-form-control>
+      </nz-form-item>
+      <br/>
+      <nz-form-item>
+        <nz-form-label nzSpan="7">Period</nz-form-label>
+        <nz-form-control>
+          <label>
+            <input nz-input type = "text" name="period" formControlName="period"/>
+          </label>
+        </nz-form-control>
+      </nz-form-item>
+      <br/>
+      <nz-form-item>
+        <nz-form-label nzSpan="7">Rate Value</nz-form-label>
+        <nz-form-control>
+          <label>
+            <input nz-input type = "text" name="rateValue" formControlName="rateValue"/>
+          </label>
+        </nz-form-control>
+      </nz-form-item>
+      <br/>
+      <div>
+        <button nz-button nzType="primary" nzSize="large" nzShape="round"
+                style="background-color: brown; float: left" routerLink="/list-account">Cancel</button>
+      </div>
+    </form>
+  </nz-card>
+</nz-row>
+

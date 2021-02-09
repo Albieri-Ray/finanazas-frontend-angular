@@ -1,1 +1,50 @@
-<p>list-account works!</p>
+<nz-row style="height: 90%">
+  <app-menu></app-menu>
+  <nz-layout style="align-content: center; ">
+    <div nz-row nzAlign="middle" nzJustify="center">
+      <div nz-col [nzSpan]="4"></div>
+      <div nz-col [nzSpan]="16">
+        <button nz-button nzType="primary" nzSize="large" nzShape="round"
+                style="background-color: black; float: left">Add</button>
+        <nz-select nzPlaceHolder="Select Client" [(ngModel)]="clientId" (ngModelChange)="changeClient(clientId)">
+          <nz-option *ngFor="let client of clients" [nzValue]="client.id" [nzLabel]="client.firstName"></nz-option>
+        </nz-select>
+      </div>
+      <nz-table [nzData]="accounts" [nzBordered]="true" [nzShowPagination]="false">
+        <thead>
+        <tr>
+          <th>Client</th>
+          <th>Maintenance</th>
+          <th>Line Of Credit</th>
+          <th>Actions</th>
+          <th>Trust</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let account of accounts">
+          <td>{{account.clientName}}</td>
+          <td>{{account.maintenanceDescription}}</td>
+          <td>
+            <button (click)="goToShowLineOfCredit(this.account.lineOfCredit.id)">
+              <i nz-icon nzType="eye" nzTheme="outline"></i>
+            </button>
+          </td>
+          <td>
+            <button style="margin-right: 6px" >
+              <i nz-icon nzType="edit" nzTheme="outline"></i>
+            </button>
+            <button>
+              <i nz-icon nzType="edit" nzTheme="outline"></i>
+            </button>
+          </td>
+          <td>
+            <button>
+              <i nz-icon nzType="credit-card" nzTheme="outline"></i>
+            </button>
+          </td>
+        </tr>
+        </tbody>
+      </nz-table>
+      <div nz-col [nzSpan]="4"></div>
+    </div></nz-layout>
+</nz-row>
