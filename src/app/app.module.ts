@@ -42,6 +42,8 @@ import { DetailLineOfCreditComponent } from './views/detail-line-of-credit/detai
 import { AddAccountComponent } from './views/add-account/add-account.component';
 import { EditLineOfCreditComponent } from './views/edit-line-of-credit/edit-line-of-credit.component';
 import { AccountChangeMaintenanceComponent } from './views/account-change-maintenance/account-change-maintenance.component';
+import { ListTrustComponent } from './views/list-trust/list-trust.component';
+import { AddTrustComponent } from './views/add-trust/add-trust.component';
 
 registerLocaleData(en);
 
@@ -66,7 +68,9 @@ registerLocaleData(en);
     DetailLineOfCreditComponent,
     AddAccountComponent,
     EditLineOfCreditComponent,
-    AccountChangeMaintenanceComponent
+    AccountChangeMaintenanceComponent,
+    ListTrustComponent,
+    AddTrustComponent
   ],
   imports: [
     BrowserModule,

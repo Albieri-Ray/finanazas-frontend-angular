@@ -33,12 +33,12 @@
             <button style="margin-right: 6px" (click)="goToEditLineOfCredit(this.account.lineOfCredit.id)">
               <i nz-icon nzType="edit" nzTheme="outline"></i>
             </button>
-            <button  (click)="goToEditMaintenance(this.account.id)">
+            <button  (click)="goToEditMaintenance(account.id)">
               <i nz-icon nzType="edit" nzTheme="outline"></i>
             </button>
           </td>
           <td>
-            <button>
+            <button (click)="goToTrustList(account.id)">
               <i nz-icon nzType="credit-card" nzTheme="outline"></i>
             </button>
           </td>

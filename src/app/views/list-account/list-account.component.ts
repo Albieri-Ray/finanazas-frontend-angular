@@ -52,4 +52,7 @@ export class ListAccountComponent implements OnInit {
   goToEditMaintenance(accountId: number): void{
     this.router.navigate([`account-change-maintenance/${accountId}`]).then();
   }
+  goToTrustList(accountId: number): void{
+    this.router.navigate([`${accountId}/list-trust`]).then();
+  }
 }

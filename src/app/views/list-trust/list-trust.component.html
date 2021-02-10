@@ -1,0 +1,43 @@
+<nz-row style="height: 90%">
+  <app-menu></app-menu>
+  <nz-layout style="align-content: center; ">
+    <div nz-row nzAlign="middle" nzJustify="center">
+      <div nz-col [nzSpan]="4"></div>
+      <div nz-col [nzSpan]="16">
+        <button nz-button nzType="primary" nzSize="large" nzShape="round"
+                style="background-color: black; float: left" (click)="goToTrustAdd()">Add</button>
+      </div>
+      <nz-table [nzData]="trusts" [nzBordered]="true" [nzShowPagination]="false">
+        <thead>
+        <tr>
+          <th>Price Product</th>
+          <th>Register Date</th>
+          <th>Products</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let trust of trusts">
+          <td>{{trust.priceProduct}}</td>
+          <td>{{trust.registerDate}}</td>
+          <td>{{trust.products}}</td>
+          <td>
+            <button style="margin-right: 3px" (click)="showModal(trust.id)" >
+              <i nz-icon nzType="delete" nzTheme="outline"></i>
+            </button>
+            <button>
+              <i nz-icon nzType="edit" nzTheme="outline"></i>
+            </button>
+          </td>
+        </tr>
+        </tbody>
+      </nz-table>
+      <nz-modal nzTitle="Delete Trust" [(nzVisible)]="visibleDeleteModal" (nzOnCancel)="cancelModal()"
+                (nzOnOk)="deleteTrust()">
+        <ng-container *nzModalContent>
+          <p>Are you sure want to delete?</p>
+        </ng-container>
+      </nz-modal>
+      <div nz-col [nzSpan]="4"></div>
+    </div></nz-layout>
+</nz-row>

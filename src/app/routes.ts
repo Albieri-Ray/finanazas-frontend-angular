@@ -17,6 +17,8 @@ import {DetailLineOfCreditComponent} from './views/detail-line-of-credit/detail-
 import {AddAccountComponent} from './views/add-account/add-account.component';
 import {EditLineOfCreditComponent} from './views/edit-line-of-credit/edit-line-of-credit.component';
 import {AccountChangeMaintenanceComponent} from './views/account-change-maintenance/account-change-maintenance.component';
+import {ListTrustComponent} from './views/list-trust/list-trust.component';
+import {AddTrustComponent} from './views/add-trust/add-trust.component';
 
 export const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},
@@ -37,5 +39,7 @@ export const routes: Routes = [
   {path: 'detail-line-of-credit/:id', component: DetailLineOfCreditComponent},
   {path: 'add-account', component: AddAccountComponent},
   {path: 'edit-line-of-credit/:id', component: EditLineOfCreditComponent},
-  {path: 'account-change-maintenance/:id', component: AccountChangeMaintenanceComponent}
+  {path: 'account-change-maintenance/:id', component: AccountChangeMaintenanceComponent},
+  {path: ':accountId/list-trust', component: ListTrustComponent},
+  {path: ':accountId/add-trust', component: AddTrustComponent}
 ];
