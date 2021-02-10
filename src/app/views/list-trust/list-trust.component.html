@@ -25,7 +25,7 @@
             <button style="margin-right: 3px" (click)="showModal(trust.id)" >
               <i nz-icon nzType="delete" nzTheme="outline"></i>
             </button>
-            <button>
+            <button (click)="goToTrustEdit(trust.id)">
               <i nz-icon nzType="edit" nzTheme="outline"></i>
             </button>
           </td>

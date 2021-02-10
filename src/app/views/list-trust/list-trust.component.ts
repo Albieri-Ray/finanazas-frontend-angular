@@ -46,4 +46,7 @@ export class ListTrustComponent implements OnInit {
   goToTrustAdd(): void{
     this.router.navigate([`${this.accountId}/add-trust`]).then();
   }
+  goToTrustEdit(trustId: number): void{
+    this.router.navigate([`edit-trust/${trustId}`]).then();
+  }
 }
